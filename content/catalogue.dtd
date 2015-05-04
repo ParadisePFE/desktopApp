@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT catalogue (categories, commandes, produits)>
+<!ELEMENT categories (categorie*)>
+<!ELEMENT commandes (commande*)>
+<!ELEMENT produits (produit*)>
+<!ELEMENT categorie EMPTY>
+<!ELEMENT commande (entree*)>
+<!ELEMENT produit (reference, designation, prixNormal, prixPromo, image)>
+<!ELEMENT entree EMPTY>
+<!ELEMENT reference (#PCDATA)>
+<!ELEMENT designation (#PCDATA)>
+<!ELEMENT prixNormal (#PCDATA)>
+<!ELEMENT prixPromo (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+
+<!ATTLIST catalogue date CDATA #REQUIRED>
+<!ATTLIST categorie id ID #REQUIRED>
+<!ATTLIST commande 
+    date CDATA #REQUIRED
+    numero ID #REQUIRED    
+>
+<!ATTLIST produit 
+    type CDATA #REQUIRED
+    promo (yes|no) #IMPLIED
+>
+<!ATTLIST entree 
+    ref CDATA #REQUIRED
+    prix CDATA #REQUIRED
+    quantite CDATA #REQUIRED
+>

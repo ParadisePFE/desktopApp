@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Gestion des catalogues</title>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bower_components/semantic-ui/dist/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="bower_components/semantic-ui/examples/feed.css">
+
+		<script type="text/javascript" src="app/main.js"></script>
+	</head>
+</head>
+<body id="feed">
+  <div class="ui divided two column padded grid">
+    <div ng-view></div>
+  </div>
+
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/semantic-ui/dist/semantic.min.js"></script>
+  <script type="text/javascript" src="bower_components/semantic-ui/examples/feed.js"></script>
+  
+
+  <!-- load angular stuff -->
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="app/paradise-ng-core.js"></script>
+  <!-- services -->
+  <script type="text/javascript" src="app/service/Product.js"></script>
+  <script type="text/javascript" src="app/service/Catalogue.js"></script>
+  <script type="text/javascript" src="app/service/Category.js"></script>
+  <!-- controllers -->
+  <script type="text/javascript" src="app/controller/MainController.js"></script>
+  <script type="text/javascript" src="app/controller/SidebarController.js"></script>
+</body>
+</html>

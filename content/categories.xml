@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<categories>
+    <categorie>
+        <id>1</id>
+        <name>chemise</name>
+        <slug>chemise</slug>
+    </categorie>
+    <categorie>
+        <id>2</id>
+        <name>blouson</name>
+        <slug>blouson</slug>
+    </categorie>
+    <categorie>
+        <id>3</id>
+        <name>veston</name>
+        <slug>veston</slug>
+    </categorie>
+</categories>

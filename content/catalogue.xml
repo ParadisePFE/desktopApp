@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+    <name>Paradise Home</name>
+    <phone>+212675625948</phone>
+    <address>7 Rue 49 lotis oumnia Qu riad essalam, Mohammedia</address>
+    <creattion>2012-12-12</creattion>
+    <commandes>
+        <commande date="2012-12-05" numero="c1001">
+            <entree ref="p1012732NC" prix="39.98" quantite="2" />
+            <entree ref="p2203633" prix="149" quantite="1" />
+            <entree ref="p2103625E" prix="249" quantite="1" />
+            <entree ref="p3317" prix="325" quantite="2" />
+        </commande>
+        <commande date="2012-12-06" numero="c1002">
+            <entree ref="p22651-02" prix="99.99" quantite="3" />
+            <entree ref="p2212807DE" prix="79.98" quantite="2" />
+            <entree ref="p5418151" prix="129" quantite="1" />
+        </commande>
+    </commandes>
+    <produits>
+        <produit category_id="1" promo="no">
+            <reference>p1012732NC</reference>
+            <designation>CHEMISE MARCO FERRERA</designation>
+            <prixNormal>39.98</prixNormal>
+            <prixPromo/>
+            <image>w10-1012732nc-tq.jpg</image>
+            <stock>100</stock>
+        </produit>
+        <produit category_id="1" promo="yes">
+            <reference>p2212780</reference>
+            <designation>CHEMISE MARCO FERRERA</designation>
+            <prixNormal>59</prixNormal>
+            <prixPromo>39.98</prixPromo>
+            <image>w10-2212780-ny.jpg</image>
+            <stock>43</stock>
+        </produit>
+    </produits>
+</catalogue>

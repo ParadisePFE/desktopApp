@@ -1,0 +1,23 @@
+{
+  "name": "paradise",
+  "version": "1.0.0",
+  "description": "Gestion des catalogues",
+  "main": "./app.html",
+  "window": {
+    "toolbar": false,
+    "width": 1050,
+    "height": 600
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jemmoudi Mohammed & Yassin Senhaji",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.12.3",
+    "xml2js": "^0.4.8"
+  },
+  "devDependencies": {
+    "xml-to-json": "^0.1.1"
+  }
+}

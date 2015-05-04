@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="catalogue">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="categories" maxOccurs="1"/>
+                <xsd:element ref="commandes" maxOccurs="1"/>
+                <xsd:element ref="produits" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute name="date" type="xsd:date"/>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="categories">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="categorie" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="categorie" type="typeCategorie"/>
+    <xsd:complexType name="typeCategorie">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="id" type="xsd:ID" />
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    
+    <xsd:element name="commandes">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="commande" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="commande">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="entree" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+            <xsd:attribute name="date" type="xsd:date"/>
+            <xsd:attribute name="numero" type="xsd:positiveInteger"/>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="entree">
+        <xsd:complexType>
+            <xsd:attribute name="ref" type="xsd:string"/>
+            <xsd:attribute name="prix" type="xsd:double"/>
+            <xsd:attribute name="quantite" type="xsd:positiveInteger"/>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="produits">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="produit" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="produit">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="reference" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                <xsd:element name="designation" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+                <xsd:element name="prixNormal" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+                <xsd:element name="prixPromo" type="xsd:double" minOccurs="1" maxOccurs="1"/>
+                <xsd:element name="image" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute name="type" type="xsd:string"/>
+            <xsd:attribute name="promo" type="typePromo"/>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:simpleType name="typePromo">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="yes" />
+            <xsd:enumeration value="no" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+</xsd:schema>
